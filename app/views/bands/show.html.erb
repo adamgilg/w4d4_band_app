@@ -1,0 +1,25 @@
+<h1><%= @band.name %></h1>
+
+<h3>Members</h3>
+
+<ul>
+  <% @band.artists.each do |artist| %>
+    <li>
+      <%= link_to artist.name, artist_path(artist), class: "artist_name" %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Recordings</h3>
+
+<ul>
+  <% @band.songs.each do |song| %>
+    <li>
+      <%= link_to song.name, song_path(song), class: "song_name" %>
+    </li>
+  <% end %>
+</ul>
+
+<div><%= link_to "Back to Bands", bands_path %></div>
+<div><%= button_to "Delete", band_path(@band), method: :delete, 
+  confirm: "Really delete this band?" %></div>

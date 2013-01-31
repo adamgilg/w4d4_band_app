@@ -1,0 +1,29 @@
+<h1><%= @artist.name %></h1>
+
+<h3>Bio</b3>
+<p>Band:
+  <%= link_to @artist.band.name, band_path(@artist.band), class: "band_name" %>
+<p>
+
+
+<h3>Song List</h3>
+
+<ul>
+  <% @artist.authored_songs.each do |song| %>
+    <li>
+     <%= link_to song.name, song_path(song), class: "song_name" %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Recordings</h3>
+
+<ul>
+  <% @artist.performed_songs.each do |song| %>
+    <li>
+     <%= link_to song.name, song_path(song), class: "song_name" %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to Artists Page", artists_path %>

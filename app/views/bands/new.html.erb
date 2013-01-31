@@ -1,0 +1,7 @@
+<h1>Create a new band!</h1>
+
+<%= form_tag("/bands", method: :post) do %>
+  <%= label_tag(:name, "What is the band's name?") %>
+  <%= text_field_tag(:name, @band.name, placeholder: "band name here") %>
+  <%= submit_tag("Submit") %>
+<% end %>

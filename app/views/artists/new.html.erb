@@ -1,0 +1,8 @@
+<h1>Create a new artist!</h1>
+
+<%= form_tag("/artists", method: :post) do %>
+  <%= label_tag(:name, "What is the artist's name?") %>
+  <%= text_field_tag(:name, @artist.name, placeholder: "artist name here") %>
+
+  <%= submit_tag("Submit") %>
+<% end %>
