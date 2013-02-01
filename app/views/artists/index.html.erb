@@ -9,7 +9,17 @@
 </ul>
 
 
-<p><%= link_to "Create New Artist!", new_artist_path %></p>
+<p>
+  <%= link_to "Create New Artist!", new_artist_path %>
+</p>
+
 <div class="footer">
-  <p><%= link_to "THROB", root_path %></p>
+  <div>
+    <%= link_to "Artists", artists_path %>
+    <%= link_to "Bands", bands_path %>
+    <%= link_to "Songs", songs_path %>
+  </div>
+  <div class ="under_foot">
+    <%= link_to "THROB", root_path %>
+  </div>
 </div>

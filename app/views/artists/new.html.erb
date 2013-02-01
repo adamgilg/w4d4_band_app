@@ -1,8 +1,13 @@
 <h1>Create a new artist!</h1>
 
-<%= form_tag("/artists", method: :post) do %>
-  <%= label_tag(:name, "What is the artist's name?") %>
-  <%= text_field_tag(:name, @artist.name, placeholder: "artist name here") %>
+<%= form_for @artist do |f| %>
+  <%= f.label :name, "What is the artist's name?" %>
+  <%= f.text_field :name, placeholder: "artist name here" %>
+  <br>
+  <%= f.label :band_id, "What is the name of your artist's band?" %>
+  <%= f.collection_select(:band_id, Band.all, :id, :name) %>
 
-  <%= submit_tag("Submit") %>
+  <%= f.file_field :photo %>
+
+  <%= f.submit "Submit" %>
 <% end %>

@@ -12,7 +12,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(name: params[:name])
+    @artist = Artist.new(params[:artist])
 
     if @artist.save
       redirect_to artist_path(@artist)

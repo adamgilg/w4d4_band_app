@@ -25,5 +25,6 @@
     </li>
   <% end %>
 </ul>
-
+<div><%= button_to "DESTROY", artist_path(@artist), method: :delete, 
+  confirm: "Hit okay to cancel delete." %></div>
 <%= link_to "Back to Artists Page", artists_path %>

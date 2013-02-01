@@ -1,0 +1,10 @@
+<h1>whatcha song?</h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label :name, "Wha diz?" %>
+  <%= f.text_field :name, placeholder: "ssssssong." %>
+  <br>
+  <%= f.label :author_id, "who rote dis?" %>
+  <%= f.collection_select(:author_id, Artist.all, :id, :name) %>
+  <%= f.submit "Submit" %>
+<% end %>

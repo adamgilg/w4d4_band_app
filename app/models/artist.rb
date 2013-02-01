@@ -1,6 +1,6 @@
 class Artist < ActiveRecord::Base
   attr_accessible :name, :band_id
-
+  validates :band_id, presence: :true
   belongs_to :band
   has_many :authored_songs, class_name: "Song", foreign_key: :author_id
   has_many :recordings, through: :band

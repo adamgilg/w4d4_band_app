@@ -1,7 +1,12 @@
-<h1>Throbbing Neon Productions</h1>
+<div class="title">
+  <h1>Throbbing Neon Productions</h1>
+</div>
+<div class="container">
+  <h3 class="dashboard">
+    <%= link_to "Bands", bands_path %> |
+    <%= link_to "Artists", artists_path %> |
+    <%= link_to "Songs", songs_path %>
+  </h3>
+</div>
 
-<h3><%= link_to "Bands", bands_path %></h3>
-<h3><%= link_to "Artists", artists_path %></h3>
-<h3><%= link_to "Songs", songs_path %></h3>
-
-<p>  Wobble...wobble...</p>
+<h6>  Wobble...wobble...</h6>
