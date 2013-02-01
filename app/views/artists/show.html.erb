@@ -1,10 +1,18 @@
-<h1><%= @artist.name %></h1>
+<div class="photo">
+  <% unless @artist.photo_blob.blank? %>
+    <%= image_tag photo_artist_path(@artist) %>
+  <% end %>
+</div>
 
-<h3>Bio</b3>
-<p>Band:
-  <%= link_to @artist.band.name, band_path(@artist.band), class: "band_name" %>
-<p>
+<div class='artist_bio'>
+  <h1><%= @artist.name %></h1>
 
+  <h3>Bio</h3>
+
+  <p>Band:
+    <%= link_to @artist.band.name, band_path(@artist.band), class: "band_name" %>
+  </p>
+</div>
 
 <h3>Song List</h3>
 
